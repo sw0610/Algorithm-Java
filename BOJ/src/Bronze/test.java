@@ -3,13 +3,10 @@ package Bronze;
 import java.util.Scanner;
 
 public class test {
-public static void main(String[] args) {
-
-
-	
-	int i1=Integer.MAX_VALUE;
-	int i2= i1+1;
-	System.out.println(i1);
-	System.out.println(i2);
-}
+	public static void main(String[] args) {
+		float f1=2.0f;
+		float f2=1.1f;
+		float f3 = f1-f2;
+		System.out.println(f3);
+	}
 }
