@@ -107,7 +107,7 @@ public class G3_17135 {
 						copy[i][j]=0;
 						res++;
 					}
-
+//
 				}
 				}
 			}
