@@ -5,65 +5,54 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class D4_3234 {
+public class D4_3234_2 {
 	
-	static int N, res;
-	static int[] scale, nums;
-	static boolean[] selected;
+	static int res;
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		StringBuilder sb= new StringBuilder();
 		
+		
 		int T= Integer.parseInt(br.readLine());
 		
 		for(int tc=1;tc<=T;tc++) {
-			N=Integer.parseInt(br.readLine());
+			int N=Integer.parseInt(br.readLine());
 			st=new StringTokenizer(br.readLine());
-			scale=new int[N];
+			int[] scale=new int[N];
 			for(int i=0;i<N;i++){
 				scale[i]=Integer.parseInt(st.nextToken());
 			}
 			
 			res=0;
-			nums=new int[N];
-			selected=new boolean[N];
-			perm(0);
+			int[] nums=new int[N];
+			boolean[] selected=new boolean[N];
+			perm(0, 0, 0, scale, selected,N);
 			
 			sb.append("#"+tc+" "+res+"\n");
+			
 		}
 		System.out.println(sb);
-		
 	}
 
-	private static void perm(int cnt) {
+	private static void perm(int cnt, int left, int right, int[] scale, boolean[] selected, int N) {
+		if(right>left) {
+			return;
+		}
 		
 		if(cnt==N) {
-			find(0,0,0);
+			res++;
 			return;
 		}
 		
 		for(int i=0;i<N;i++) {
 			if(!selected[i]) {
-				nums[cnt]=scale[i];
 				selected[i]=true;
-				perm(cnt+1);
+				perm(cnt+1, left+scale[i], right, scale, selected, N);
+				perm(cnt+1, left, right+scale[i], scale, selected, N);
 				selected[i]=false;
 			}
-				
-		}
-		
-	}
-	
-	private static void find(int idx, int left, int right) {
-		if(idx==N) {
-			res++;
-			return;
-		}
-		find(idx+1, left+nums[idx], right);
-		if(right+nums[idx]<=left) {
-			find(idx+1, left, right+nums[idx]);
 		}
 	}
 }
