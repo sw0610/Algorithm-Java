@@ -9,7 +9,6 @@ INDEX VERSION 1.131+C:\Users\sowon\코딩테스트_Java\.metadata\.plugins\org.eclips
 2904636744.index
 1039306593.index
 398925468.index
-123701224.index
 356327.index
 3200703938.index
 468107086.index
