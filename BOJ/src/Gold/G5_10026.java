@@ -38,8 +38,8 @@ public class G5_10026 {
 			for(int j=0;j<N;j++) {
 				if(map[i][j].equals("R")||map[i][j].equals("G")||map[i][j].equals("B")) {
 					ns=map[i][j];
-					if(find(i, j, map))
-						res1++;
+					find(i, j, map);
+					res1++;
 				}
 			}
 		}
@@ -48,8 +48,8 @@ public class G5_10026 {
 			for(int j=0;j<N;j++) {
 				if(copy[i][j].equals("R")||copy[i][j].equals("B")) {
 					ns=copy[i][j];
-					if(find(i, j, copy))
-						res2++;
+					find(i, j, copy);
+					res2++;
 				}
 			}
 		}
@@ -72,5 +72,25 @@ public class G5_10026 {
 		}
 		return false;
 	}
+
+//	static int[] dx= {0,-1,0,1};
+//	static int[] dy= {-1,0,1,0};
+//	private static void find2(int x, int y, String[][] color) {
+////		visited[x][y]=true;
+//		String tmp=color[x][y];
+//		color[x][y]="X";
+//		
+//		for(int i=0;i<4;i++) {
+//			int nx=x+dx[i];
+//			int ny=y+dy[i];
+//			
+//			if(0<=nx && nx<N && 0<=ny && ny<N) {
+//				if(color[nx][ny].equals(tmp)) {				
+//					find2(nx, ny, color);
+//				}
+//			}
+//		}
+//		
+//	}
 
 }
