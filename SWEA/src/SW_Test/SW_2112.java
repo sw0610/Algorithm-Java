@@ -54,6 +54,7 @@ public class SW_2112 {
 	// 합격기준 체크하기
 	// 만약 한 줄이라도 통과 못하는 곳이 있다면 넘어가기
 	
+	//부분집합
 	private static void find(int idx, int cnt) {
 		if(res!=Integer.MAX_VALUE && cnt>res) {
 			return;
