@@ -57,7 +57,7 @@ public class SW_2112 {
 	//부분집합
 	private static void find(int idx, int cnt) {
 		if(res!=Integer.MAX_VALUE && cnt>res) {
-			return;
+			return; // 백트래킹
 		}
 		
 		if(idx==D) {
@@ -82,7 +82,7 @@ public class SW_2112 {
 		find(idx+1, cnt);
 	}
 		
-	//A B 정해주기
+	//A B 정해주기 
 	private static void selectA(int idx) {
 		if(idx==S) {
 			if(check()) {
