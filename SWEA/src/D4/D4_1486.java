@@ -69,14 +69,4 @@ public class D4_1486 {
 
 	}
 
-//	private void subset2(int idx, int sum) {
-//		
-//		if(sum>)
-//		
-//		selected[idx]=true;
-//		subset2(idx+1, sum+nums[idx]);
-//		selected[idx]=false;
-//		subset2(idx+1, sum);
-//		
-//	}
 }
